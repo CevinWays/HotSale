@@ -21,42 +21,17 @@
 
   <body class="br-simple-white">
 
-    <!-- ########## START: LEFT PANEL ########## -->
-    <div class="br-logo"><a href="./card-listing.html"><span class="fa fa-tag"></span> HOT <i>SALE !</i><span></span></a></div>
-    <div class="br-sideleft overflow-y-auto">
-      <label class="sidebar-label pd-x-15 mg-t-20">Navigation</label>
-      <div class="br-sideleft-menu">
-        <a href="#" class="br-menu-link active show-sub">
-          <div class="br-menu-item">
-            <i class="menu-item-icon icon ion-ios-cart-outline tx-20"></i>
-            <span class="menu-item-label">Produk HotSale</span>
-            <i class="menu-item-arrow fa fa-angle-down"></i>
-          </div><!-- menu-item -->
-        </a><!-- br-menu-link -->
-        <ul class="br-menu-sub nav flex-column">
-          <li class="nav-item"><a href="{{route('home')}}" class="nav-link">Cari Produk Hot Sale</a></li>
-          <li class="nav-item"><a href="{{route('produk')}}" class="nav-link">Cari Produk</a></li>
-        </ul>
-      </div><!-- br-sideleft-menu -->
-
-      <br />
-    </div><!-- br-sideleft -->
-    <!-- ########## END: LEFT PANEL ########## -->
-
     @yield('content')
 
     <!-- ########## START: HEAD PANEL ########## -->
     <div class="br-header">
-      <div class="br-header-left">
-        <div class="navicon-left hidden-md-down"><a id="btnLeftMenu" href="#"><i class="icon ion-navicon-round"></i></a></div>
-        <div class="navicon-left hidden-lg-up"><a id="btnLeftMenuMobile" href="#"><i class="icon ion-navicon-round"></i></a></div>
-        
-      </div><!-- br-header-left -->
-      <div class="br-header-right">
-        <nav class="nav">
-
-        </nav>
-      </div><!-- br-header-right -->
+      <div class="pd-15 bg-purple bg-mantle rounded" style="width: 100%">
+        <ul class="nav nav-white-800 flex-column flex-md-row">
+          <h4 class="mg-b-0 tx-uppercase tx-bold tx-spacing--2 tx-inverse mg-r-20 mg-l-10 pd-y-6 tx-poppins">HOTSALE</h4>
+          <li class="nav-item"><a class="nav-link" href="{{route('home')}}">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{route('produk')}}">Produk</a></li>
+        </ul>
+      </div>
     </div><!-- br-header -->
     <!-- ########## END: HEAD PANEL ########## -->
 

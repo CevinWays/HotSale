@@ -15698,10 +15698,10 @@ textarea.parsley-success:focus {
   background-color: #fff;
   z-index: 1040;
 }
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
   .br-header {
     left: 230px;
-  }
+  } */
 }
 
 .br-header-left {

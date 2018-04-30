@@ -1,13 +1,9 @@
 @extends('layout.layout')
 @section('content')
     <!-- ########## START: MAIN PANEL ########## -->
-    <div class="br-mainpanel">
-      {{--  <div class="d-sm-flex align-items-center pd-t-15 pd-sm-t-25 pd-x-20 pd-sm-x-30">
-        
-      </div><!-- d-flex -->  --}}
 
-      <div class="br-pagebody pd-x-20 pd-sm-x-30 pd-y-5 mx-wd-1350">
-          
+      <div class="br-pagebody pd-x-20 pd-sm-x-30 pd-y-20 mx-wd-1350">
+
         <div class="card widget-18 shadow-base mg-t-20">
             <div class="wt-content">
                 <div class="wt-content-item">
@@ -260,6 +256,5 @@
       <footer class="br-footer">
         {{--  footer here  --}}
       </footer>
-    </div><!-- br-mainpanel -->
     <!-- ########## END: MAIN PANEL ########## -->
 @endsection
