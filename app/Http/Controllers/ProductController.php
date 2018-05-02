@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -11,9 +11,19 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('produk');
+        if ($request->has('_token')) {
+            $cari= $request->cari;
+            $products = Product::where('name','like','%'.$cari.'%')->get();
+            return view('produk')->with('products',$products);
+        } else {
+            $products = Product::all();
+            return view('produk')->with('products',$products);
+        }
+        
+
+        
     }
 
     /**

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -11,9 +11,24 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('home');
+        if ($request->has('_token')) {
+            $awal = $request->awal;
+            $akhir = $request->akhir;
+            $age = $request->age;
+            $jenis = $request->jenis;
+
+            $products = Product::whereBetween('date_product',[$awal,$akhir])->where('age','=',$age)->where('gender','=',$jenis)->get();
+            return view('home')->with('products',$products);
+        } else {
+            $products = Product::all();
+            return view('home')->with('products',$products);
+        }
+        
+
+        
+        
     }
 
     /**
