@@ -16,10 +16,13 @@ class HomeController extends Controller
         if ($request->has('_token')) {
             $awal = $request->awal;
             $akhir = $request->akhir;
-            $age = $request->age;
+            $age_awal = $request->age_awal;
+            $age_akhir = $request->age_akhir;
             $jenis = $request->jenis;
+            $kategori = $request->kategori;
 
-            $products = Product::whereBetween('date_product',[$awal,$akhir])->where('age','=',$age)->where('gender','=',$jenis)->get();
+            $products = Product::whereBetween('date_product',[$awal,$akhir])->whereBetween('age',[$age_awal,$age_akhir])->where('gender','=',$jenis)
+            ->where('category','=',$kategori)->get();
             return view('home')->with('products',$products);
         } else {
             $products = Product::all();

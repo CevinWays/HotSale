@@ -16,29 +16,48 @@
                     <div class="col-md-4 col-lg-3 mg-t-10 mg-lg-t-0">
                         <div class="form-group mg-b-0">
                         <label>Tanggal Awal</label>
-                        <input type="date" name="awal" class="form-control tx-14" data-language="en" placeholder="Tanggal Awal" />
+                        <input type="date" name="awal" class="form-control tx-14" data-language="en" placeholder="Dari Tanggal" required />
                         </div><!-- form-group -->
                     </div><!-- col-2 -->
                     <div class="col-md-4 col-lg-3 mg-t-10 mg-lg-t-0">
                         <div class="form-group mg-b-0">
                         <label>Tanggal Akhir</label>
-                        <input type="date" name="akhir" class="form-control tx-14" data-language="en" placeholder="Tanggal Akhir" />
+                        <input type="date" name="akhir" class="form-control tx-14" data-language="en" placeholder="Sampai Tanggal" required />
                         </div><!-- form-group -->
                     </div><!-- col-2 -->
                     <div class="col-md-4 col-lg-3 mg-t-10 mg-lg-t-0">
                         <div class="form-group mg-b-0">
-                        <label class="d-block">Umur</label>
-                        <input type="number" name="age" min="1" max="150" class="form-control" placeholder="umur" />
+                        <label class="d-block">Dari Umur</label>
+                        <input type="number" name="age_awal" min="1" max="150" class="form-control" placeholder="umur" required />
+                        </div><!-- form-group -->
+                    </div><!-- col-3 -->
+                    <div class="col-md-4 col-lg-3 mg-t-10 mg-lg-t-0">
+                        <div class="form-group mg-b-0">
+                        <label class="d-block">Sampai Umur</label>
+                        <input type="number" name="age_akhir" min="1" max="150" class="form-control" placeholder="umur" required />
                         </div><!-- form-group -->
                     </div><!-- col-3 -->
                     <div class="col-md-4 col-lg-3 mg-t-10 mg-lg-t-0">
                         <div class="form-group mg-b-0">
                         <label class="d-block">Gender</label>
                         <div>
-                            <select class="form-control wd-100p select2" name="jenis">
+                            <select class="form-control wd-100p select2" name="jenis" required>
                                 <option value="male" />Male
                                 <option value="female" />Female
                                 <option value="both" />Both
+                            </select>
+                        </div>
+                        </div><!-- form-group -->
+                    </div><!-- col-3 -->
+                    <div class="col-md-4 col-lg-3 mg-t-10 mg-lg-t-0">
+                        <div class="form-group mg-b-0">
+                        <label class="d-block">Kategori</label>
+                        <div>
+                            <select class="form-control wd-100p select2" name="kategori" required>
+                                <option value="otomotif" />Otomotif
+                                <option value="fashion" />Fashion
+                                <option value="elektronik" />Elektronik
+                                <option value="alat" />Peralatan Rumah Tangga
                             </select>
                         </div>
                         </div><!-- form-group -->
