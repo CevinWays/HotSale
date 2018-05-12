@@ -20,17 +20,18 @@ class HomeController extends Controller
             $age_akhir = $request->age_akhir;
             $jenis = $request->jenis;
             $kategori = $request->kategori;
+            $awal_harga = $request->awal_harga;
+            $awal_hargas = $awal_harga / 200;
+            $akhir_harga = $request->akhir_harga;
+            $akhir_hargas = $akhir_harga / 200;
 
             $products = Product::whereBetween('date_product',[$awal,$akhir])->whereBetween('age',[$age_awal,$age_akhir])->where('gender','=',$jenis)
-            ->where('category','=',$kategori)->get();
+            ->where('category','=',$kategori)->whereBetween('price',[$awal_hargas,$akhir_hargas])->get();
             return view('home')->with('products',$products);
         } else {
             $products = Product::all();
             return view('home')->with('products',$products);
         }
-        
-
-        
         
     }
 

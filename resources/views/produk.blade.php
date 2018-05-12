@@ -46,9 +46,6 @@
         <div class="card-columns column-count-4 mg-t-20">
             @foreach ($products as $product)
             <div class="card pd-25 bd-0 shadow-base" style="width: 300px; height: 400px">
-                <div class="d-flex justify-content-between align-items-center">
-                    <a href="{{ $product->url }}" class="tx-gray-600"><i class="fa fa-heart-o"></i></a>
-                </div><!-- d-flex -->
                 <img style="width: 200px; height: 200px;" src="{{ $product->image }}" class="img-fluid" alt="" />
                 <div class="d-flex justify-content-between mg-b-5">
                     <p class="mg-b-0 tx-14"><a href="{{ $product->url }}" class="tx-inverse">{{$product->name}}</a></p>

@@ -62,6 +62,18 @@
                         </div>
                         </div><!-- form-group -->
                     </div><!-- col-3 -->
+                    <div class="col-md-4 col-lg-3 mg-t-10 mg-lg-t-0">
+                        <div class="form-group mg-b-0">
+                        <label class="d-block">Dari Harga</label>
+                        <input type="number" name="awal_harga" class="form-control" placeholder="0" required />
+                        </div><!-- form-group -->
+                    </div><!-- col-3 -->
+                    <div class="col-md-4 col-lg-3 mg-t-10 mg-lg-t-0">
+                        <div class="form-group mg-b-0">
+                        <label class="d-block">Sampai Harga</label>
+                        <input type="number" name="akhir_harga" class="form-control" placeholder="0" required />
+                        </div><!-- form-group -->
+                    </div><!-- col-3 -->
                     <div class="col-md-6 col-lg-3 mg-t-10 mg-md-t-0">
                         <input type="submit" value="Temukan" class="btn btn-info tx-11 tx-spacing-1 tx-uppercase tx-medium tx-mont pd-y-12 pd-x-30 mg-t-30"/>
                     </div>
@@ -73,9 +85,7 @@
         <div class="card-columns column-count-4 mg-t-20">
             @foreach ($products as $product)
             <div class="card pd-25 bd-0 shadow-base" style="width: 300px; height: 400px">
-                <div class="d-flex justify-content-between align-items-center">
-                    <a href="{{ $product->url }}" class="tx-gray-600"><i class="fa fa-heart-o"></i></a>
-                </div><!-- d-flex -->
+                
                 <img style="width: 200px; height: 200px;" src="{{ $product->image }}" class="img-fluid" alt="" />
                 <div class="d-flex justify-content-between mg-b-5">
                     <p class="mg-b-0 tx-14"><a href="{{ $product->url }}" class="tx-inverse">{{$product->name}}</a></p>
